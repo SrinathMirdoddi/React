@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>This is Generators in ECMA Script</title>
+    </head>
+    <body>
+        <h2>Generators </h2>
+        <button onclick="Genstep()">Generators in step by step</button>
+        <script>
+            function* steps() {
+                let a = 10;
+                let b = 11;
+                console.warn(a+b)
+                yield 'step 1 completed'
+                console.warn(a-b)
+                yield 'step 2 completed'
+                console.warn(a*b)
+                yield 'step 3 completed'
+
+                return "All steps are done"
+            }
+            let stp = steps();
+
+            function Genstep() {
+                console.warn(stp.next());
+            }
+
+           
+        </script>
+    </body>
+</html>

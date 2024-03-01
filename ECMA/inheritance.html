@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Welcome to ECMA(ES6) Tutorial</title>
+    </head>
+    <body>
+        <h1>Inheritance</h1>
+        <script>
+            class Category {
+                getCategory() {
+                    return "this sis palm few vector";
+                }
+                getItem() {
+                    return "Its a list of Item";
+                }
+                getData() {
+                    return "Its everything";
+                }
+            }
+            class Fruit {
+                fruit = "mango";
+                constructor() {
+                    console.warn("muskmelon", this.fruit)
+                }
+                getFruit() {
+                    return "This is Fruit juice";
+                }
+            }
+            class Drink extends Fruit {
+                juice = "custard";
+                constructor() {
+                    super()
+                    console.warn("seethaphal", this.juice)
+                }
+                putJuice() {
+                    return "grape juice is soo sweet";
+                }                
+            }
+            class Eat extends Category {
+                eat = "Biryani";
+                constructor() {
+                    super()
+                    console.warn("Chicken biryani", this.eat)
+                }
+                getFood() {
+                    return "Hyderabadi and biryani are delicious";
+                }
+            }
+            let f1 = new Fruit;
+            let c1 = new Category;
+            console.warn(f1.getFruit())
+            console.warn(c1.getCategory())
+            console.warn(c1.getItem())
+            console.warn(c1.getData())
+            let d1 = new Drink;
+            console.warn(d1.putJuice())
+            let b1 = new Eat;
+            console.warn(b1.getFood())
+        </script>
+    </body>
+</html>

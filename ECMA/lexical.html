@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>ES6(ECMA Script) tutorial</title>
+    </head>
+    <body>
+        <h1>Lexical Scope in ES6</h1>
+        <script>
+            let details={
+                list:'food',
+                menu:['biryani', 'prawns', 'mandi'],
+                // getFood:function() {
+                //     console.warn(this.list)
+                //     console.warn(this.menu)
+                // }
+                getFood:function(){
+
+                    this.menu.map((item) => {
+                        console.warn(this.list, item)
+                    })
+                }
+            }
+            details.getFood()
+        </script>
+    </body>
+</html>
